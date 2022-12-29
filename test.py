@@ -1,6 +1,5 @@
 import collections
 
-
 class Solution:
     def interchangeableRectangles(self, rectangles: list[list[int]]) -> int:
         dict = collections.defaultdict(int)
