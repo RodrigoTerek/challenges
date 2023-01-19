@@ -1,8 +1,13 @@
 class TicTacToe(object):
     def __init__(self, n):
-        self.matrix = [['_'] * n] * n
+        self.matrix = []
         self.playerChars = ['_', 'X', 'O']
-        return
+
+        for _ in range(n):
+            arr = []
+            for _ in range(n):
+                arr.append('_')
+            self.matrix.append(arr)
 
     def move(self, row, col, player):
         if self.matrix[row][col] != '_':
@@ -68,9 +73,9 @@ class TicTacToe(object):
 print('---------------')
 board = TicTacToe(3)
 board.move(0, 0, 1)
-# board.move(0, 2, 2)
-# board.move(2, 2, 1)
-# board.move(1, 1, 2)
-# board.move(2, 0, 1)
-# board.move(1, 0, 2)
-# print(board.move(2, 1, 1))
+board.move(0, 2, 2)
+board.move(2, 2, 1)
+board.move(1, 1, 2)
+board.move(2, 0, 1)
+board.move(1, 0, 2)
+print(board.move(2, 1, 1))
